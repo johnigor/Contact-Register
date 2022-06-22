@@ -8,18 +8,22 @@
 </div>
 
 <form asp-controller="Contato" asp-action="Criar" method="post">
+    
     <div class="form-group">
         <label for="nome">Nome</label>
         <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do contato">
+        <span asp-validation-for="Nome" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label for="email">E-mail</label>
         <input type="text" asp-for="Email" class="form-control" placeholder="Digite o e-mail do contato">
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label for="celular">Celular</label>
         <input type="text" asp-for="Celular" class="form-control" placeholder="Digite o celular do contato">
+        <span asp-validation-for="Celular" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary btn-block">Adicionar</button>
