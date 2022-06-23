@@ -29,7 +29,6 @@ namespace ControleDeContatos.Repositorio
         {
             _bancoContext.Contatos.Add(contato);
             _bancoContext.SaveChanges();
-
             return contato;
         }
 
@@ -37,7 +36,7 @@ namespace ControleDeContatos.Repositorio
         {
             ContatoModel contatoDB = ListarPorId(contato.Id);
 
-            if (contatoDB == null) throw new System.Exception("Houve um erro na atualização do contato");
+            if (contatoDB == null) throw new Exception("Houve um erro na atualização do contato");
 
             contatoDB.Nome = contato.Nome;
             contatoDB.Email = contato.Email;

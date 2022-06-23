@@ -43,6 +43,7 @@ namespace ControleDeContatos.Controllers
             try
             {
                 bool apagado = _contatoRepositorio.Apagar(id);
+
                 if (apagado)
                 {
                     TempData["MensagemSucesso"] = "Contato apagado com sucesso!";
@@ -83,7 +84,7 @@ namespace ControleDeContatos.Controllers
         }
 
         [HttpPost]
-        public IActionResult Alterar(ContatoModel contato)
+        public IActionResult Editar(ContatoModel contato)
         {
             try
             {
