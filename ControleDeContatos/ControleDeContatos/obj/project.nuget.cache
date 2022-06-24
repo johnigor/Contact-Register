@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nFntQGr+5ckowHk5vlUcRdScTOonf0hpZ5tSI6P4JqTrWcGK3VKdI/H7zh/fNdnLpI/pqvoJfb/kMZVsFBhIVA==",
+  "dgSpecHash": "AYSB4VtO9NawWgm66XdnpBHencCV1MoiL0CzCRssTmznevKOgbEJWzaynOKv2AZO076uBA22jCYIRGqwRP1/Ew==",
   "success": true,
   "projectFilePath": "C:\\Users\\John\\Desktop\\CadastroDeContatos\\CadastroDeContatos\\ControleDeContatos\\ControleDeContatos\\ControleDeContatos.csproj",
   "expectedPackageFiles": [
@@ -49,6 +49,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\John\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\system.codedom\\5.0.0\\system.codedom.5.0.0.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
