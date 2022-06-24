@@ -1193,3 +1193,4 @@ C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\C
 C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\ControleDeContatos\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
 C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\ControleDeContatos\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\ControleDeContatos\obj\Debug\net5.0\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs
+C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\ControleDeContatos\obj\Debug\net5.0\Razor\Views\Restrito\Index.cshtml.g.cs
