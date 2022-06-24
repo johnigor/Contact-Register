@@ -81,3 +81,7 @@ body {
     width: 30px;
     height: 31px;
 }
+
+.field-validation-error {
+    color: #ff0000;
+}

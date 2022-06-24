@@ -28,13 +28,13 @@ namespace ControleDeContatos.Controllers
 
         public IActionResult Editar(int id)
         {
-            ContatoModel contato = _contatoRepositorio.ListarPorId(id);
+            ContatoModel contato = _contatoRepositorio.BuscarPorId(id);
             return View(contato);
         }
 
         public IActionResult ApagarConfirmacao(int id)
         {
-            ContatoModel contato = _contatoRepositorio.ListarPorId(id);
+            ContatoModel contato = _contatoRepositorio.BuscarPorId(id);
             return View(contato);
         }
 
@@ -57,7 +57,7 @@ namespace ControleDeContatos.Controllers
             }
             catch (Exception erro)
             {
-                TempData["MensagemSucesso"] = $"Ops, não conseguimos pagar seu contato, mais detalhes do error: {erro.Message}";
+                TempData["MensagemSucesso"] = $"Ops, não conseguimos apagar seu contato, mais detalhes do erro: {erro.Message}";
                 return RedirectToAction("Index");
             }
         }
