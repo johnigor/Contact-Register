@@ -1,22 +1,12 @@
-using System;
-using System.Linq;
 using ControleDeContatos.Data;
-using System.Globalization;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ControleDeContatos.Data;
 using Microsoft.Extensions.Hosting;
 using ControleDeContatos.Repositorio;
-using Microsoft.AspNetCore.Http;
 using ControleDeContatos.Helper;
 
 namespace ControleDeContatos
