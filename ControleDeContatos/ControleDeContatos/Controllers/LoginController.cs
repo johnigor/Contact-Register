@@ -22,7 +22,18 @@ namespace ControleDeContatos.Controllers
 
         public IActionResult Index()
         {
+            // Se usuario estiver logado, redirecionar para a home
+
+            if (_sessao.BuscarSessaoUsuario() != null) return RedirectToAction("Index", "Home");
+            
             return View();
+        }
+
+        public IActionResult Sair()
+        {
+            _sessao.RemoverSessaoDoUsuario();
+
+            return RedirectToAction("Index", "Login");
         }
 
         [HttpPost]
