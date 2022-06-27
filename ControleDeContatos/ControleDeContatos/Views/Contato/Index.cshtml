@@ -36,8 +36,9 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Email</th>
-                <th scope="col">Celular</th>
+                <th scope="col">Nome da Empresa</th>
+                <th scope="col">UF</th>
+                <th scope="col">Data Cadastro</th>
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -49,8 +50,9 @@
                     <tr>
                         <th scope="row">@contato.Id</th>
                         <td>@contato.Nome</td>
-                        <td>@contato.Email</td>
-                        <td>@contato.Celular</td>
+                        <td>@contato.NomeDaEmpresa</td>
+                        <td>@contato.UF</td>
+                        <td>@contato.DataCadastro</td>
                         <td>
                             <div class="btn-group" role="group">
                                 <a role="button" asp-action="Editar" asp-controller="Contato" asp-route-id="@contato.Id" class="btn btn-primary">Editar</a>
