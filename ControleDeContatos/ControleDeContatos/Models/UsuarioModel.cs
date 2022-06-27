@@ -1,4 +1,5 @@
 ﻿using ControleDeContatos.Enums;
+using ControleDeContatos.Helper;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -28,7 +29,14 @@ namespace ControleDeContatos.Models
 
         public bool SenhaValida(string senha)
         {
-            return Senha == senha;
+
+            return Senha == senha.GerarHash();
+        }
+
+        public void SetSenhaHash()
+        {
+            //"this" do metodo GerarHash serve justamente como uma extensao, para poder usar a senha como proprio parametro
+            Senha = Senha.GerarHash();
         }
     }
 }
