@@ -10,7 +10,7 @@
 
 <form asp-controller="Contato" asp-action="Editar" method="post">
 
-    <input type="hidden" asp-for="Id"/>    
+    <input type="hidden" asp-for="Id" />
     <div class="form-group">
         <label for="nome">Nome</label>
         <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do contato">
@@ -26,6 +26,66 @@
         <label for="celular">Celular</label>
         <input type="text" asp-for="Celular" class="form-control" placeholder="Digite o celular do contato">
         <span asp-validation-for="Celular" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="text" asp-for="Telefone" class="form-control" placeholder="Digite o telefone do contato">
+        <span asp-validation-for="Telefone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="nomedaempresa">Nome da Empresa</label>
+        <input type="text" asp-for="NomeDaEmpresa" class="form-control" placeholder="Digite o nome da Empresa">
+        <span asp-validation-for="NomeDaEmpresa" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="cargo">Cargo</label>
+        <input type="text" asp-for="Cargo" class="form-control" placeholder="Digite o cargo">
+        <span asp-validation-for="Cargo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="cep">CEP</label>
+        <input type="text" asp-for="CEP" class="form-control" placeholder="Digite o CEP">
+        <span asp-validation-for="CEP" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="logradouro">Logradouro</label>
+        <input type="text" asp-for="Logradouro" class="form-control" placeholder="Digite o Logradouro">
+        <span asp-validation-for="Logradouro" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="numero">Número</label>
+        <input type="text" asp-for="Numero" class="form-control" placeholder="Digite o número">
+        <span asp-validation-for="Numero" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="complemento">Complemento</label>
+        <input type="text" asp-for="Complemento" class="form-control" placeholder="Digite o complemento">
+        <span asp-validation-for="Complemento" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="bairro">Bairro</label>
+        <input type="text" asp-for="Bairro" class="form-control" placeholder="Digite o bairro">
+        <span asp-validation-for="Bairro" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="cidade">Cidade</label>
+        <input type="text" asp-for="Cidade" class="form-control" placeholder="Digite o nome da Cidade">
+        <span asp-validation-for="Cidade" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="uf">UF</label>
+        <input type="text" asp-for="UF" class="form-control" placeholder="Digite o UF">
+        <span asp-validation-for="UF" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary btn-block">Alterar</button>

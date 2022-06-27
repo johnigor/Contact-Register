@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ControleDeContatos.Models
 {
@@ -10,11 +11,40 @@ namespace ControleDeContatos.Models
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório!")]
-        [EmailAddress(ErrorMessage = "O e-mail informado não é válido!")]
-        public string Email { get; set; }
+        public string Cargo { get; set; }
+
+        [Required(ErrorMessage = "Este campo é obrigatório!")]
+        public string NomeDaEmpresa { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório!")]
         [Phone(ErrorMessage = "O celular informado não é válido")]
         public string Celular { get; set; }
+        public string Telefone { get; set; }
+
+        [Required(ErrorMessage = "Este campo é obrigatório!")]
+        [EmailAddress(ErrorMessage = "O e-mail informado não é válido!")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Este campo é obrigatório!")]
+        public string CEP { get; set; }
+
+        [Required(ErrorMessage = "Este campo é obrigatório!")]
+        public string Logradouro { get; set; }
+
+        [Required(ErrorMessage = "Este campo é obrigatório!")]
+        public int Numero { get; set; }
+                
+        public string Complemento { get; set; }
+
+        [Required(ErrorMessage = "Este campo é obrigatório!")]
+        public string Bairro { get; set; }
+
+        [Required(ErrorMessage = "Este campo é obrigatório!")]
+        public string Cidade { get; set; }
+
+        [Required(ErrorMessage = "Este campo é obrigatório!")]
+        public string UF { get; set; }
+
+        public DateTime DataCadastro { get; set; }
     }
 }

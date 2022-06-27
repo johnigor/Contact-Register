@@ -1195,3 +1195,4 @@ C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\C
 C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\ControleDeContatos\obj\Debug\net5.0\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs
 C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\ControleDeContatos\obj\Debug\net5.0\Razor\Views\Restrito\Index.cshtml.g.cs
 C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\ControleDeContatos\obj\Debug\net5.0\Razor\Views\Login\RedefinirSenha.cshtml.g.cs
+C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\ControleDeContatos\obj\Debug\net5.0\Razor\Views\Relatorio\Index.cshtml.g.cs
