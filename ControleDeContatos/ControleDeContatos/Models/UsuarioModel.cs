@@ -38,5 +38,12 @@ namespace ControleDeContatos.Models
             //"this" do metodo GerarHash serve justamente como uma extensao, para poder usar a senha como proprio parametro
             Senha = Senha.GerarHash();
         }
+
+        public string GerarNovaSenha()
+        {
+            string novaSenha = Guid.NewGuid().ToString().Substring(0, 8);
+            Senha = novaSenha.GerarHash();
+            return novaSenha;
+        }
     }
 }
