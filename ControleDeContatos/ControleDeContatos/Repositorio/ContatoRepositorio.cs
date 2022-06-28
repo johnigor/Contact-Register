@@ -18,27 +18,7 @@ namespace ControleDeContatos.Repositorio
         public ContatoModel BuscarPorId(int id)
         {
             return _bancoContext.Contatos.FirstOrDefault(x => x.Id == id);
-        }
-
-        public ContatoModel BuscarPorNome(string nome)
-        {
-            return _bancoContext.Contatos.FirstOrDefault(x => x.Nome == nome);
-        }
-
-        public ContatoModel BuscarPorNomeDaEmpresa(string nomeDaEmpresa)
-        {
-            return _bancoContext.Contatos.FirstOrDefault(x => x.NomeDaEmpresa == nomeDaEmpresa);
-        }
-
-        public ContatoModel BuscarPorUF(string uf)
-        {
-            return _bancoContext.Contatos.FirstOrDefault(x => x.UF == uf);
-        }
-
-        public ContatoModel BuscarPorDataDeCadastro(DateTime dataCadastro)
-        {
-            return _bancoContext.Contatos.FirstOrDefault(x => x.DataCadastro == dataCadastro);
-        }
+        }                
 
         public List<ContatoModel> BuscarTodos()
         {

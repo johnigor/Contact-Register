@@ -1,5 +1,53 @@
-﻿@{ 
-    ViewData["Title"] = "Buscar por Data de Cadastro";
-}
+﻿@model IEnumerable<ControleDeContatos.Models.ContatoModel>
 
-<h2>@ViewData["Title"]</h2>
+<div class="panel-body">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr class="success">
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NomeDaEmpresa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UF)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataCadastro)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NomeDaEmpresa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UF)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataCadastro)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
