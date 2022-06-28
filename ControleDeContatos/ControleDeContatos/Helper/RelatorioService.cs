@@ -17,29 +17,66 @@ namespace ControleDeContatos.Helper
         }
         public List<ContatoModel> FindByDate(DateTime? minDate, DateTime? maxDate)
         {
+            try
+            {
+                var result = from obj in _context.Contatos select obj;
+
+                if (minDate.HasValue) result = result.Where(x => x.DataCadastro >= minDate.Value);
+                if (maxDate.HasValue) result = result.Where(x => x.DataCadastro <= maxDate.Value);
+
+                return result
+                    .OrderByDescending(x => x.DataCadastro)
+                    .ToList();
+            }
+            catch (Exception erro)
+            {
+                throw new Exception("Não foi possível realizar a busca" + erro);
+            }
+        }
+
+        public List<ContatoModel> FindByState(string uf)
+        {
             var result = from obj in _context.Contatos select obj;
-            if (minDate.HasValue)
-            {
-                result = result.Where(x => x.DataCadastro >= minDate.Value);
-            }
-            if (maxDate.HasValue)
-            {
-                result = result.Where(x => x.DataCadastro <= maxDate.Value);
-            }
+
+            result = result.Where(x => x.UF.ToUpper() == uf.ToUpper());
             return result
-                .OrderByDescending(x => x.DataCadastro)
+                .OrderByDescending(x => x.UF)
                 .ToList();
+        }
+
+        public List<ContatoModel> FindByEnterpriseName(string nomeDaEmpresa)
+        {
+            try
+            {
+                var result = from obj in _context.Contatos select obj;
+
+                result = result.Where(x => x.NomeDaEmpresa.ToUpper().Contains(nomeDaEmpresa.ToUpper()));
+
+                return result
+                    .OrderByDescending(x => x.NomeDaEmpresa)
+                    .ToList();
+            }
+            catch (Exception erro)
+            {
+                throw new Exception("Não foi possível realizar a busca" + erro);
+            }
         }
 
         public List<ContatoModel> FindByName(string nome)
         {
-            var result = from obj in _context.Contatos select obj;
+            try
+            {
+                var result = from obj in _context.Contatos select obj;
+                result = result.Where(x => x.Nome.ToUpper() == nome.ToUpper());
 
-            result = result.Where(x => x.Nome.ToUpper() == nome.ToUpper());
-
-            return result
-                .OrderByDescending(x => x.Nome)
-                .ToList();
+                return result
+                    .OrderByDescending(x => x.Nome)
+                    .ToList();
+            }
+            catch (Exception erro)
+            {
+                throw new Exception("Não foi possível realizar a busca" + erro);
+            }
         }
     }
 }
