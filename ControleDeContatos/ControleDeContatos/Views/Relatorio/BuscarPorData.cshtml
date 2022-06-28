@@ -3,17 +3,23 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-                <div class="form-group">
-                    <label for="minDate">Min Date</label>
-                    <input type="date" class="form-control" name="minDate" value=@ViewData["minDate"] />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="minDate">Min Date</label>
+                        <input type="date" class="form-control" name="minDate" value=@ViewData["minDate"] />
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="maxDate">Max Date</label>
-                    <input type="date" class="form-control" name="maxDate" value=@ViewData["maxDate"] />
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="maxDate">Max Date</label>
+                        <div class="flex">
+                            <input type="date" class="form-control" name="maxDate" value=@ViewData["maxDate"] />
+                            <button type="submit" class="btn btn-primary ml-3">Filter</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Filter</button>
         </form>
     </div>
 </nav>

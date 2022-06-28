@@ -85,3 +85,7 @@ body {
 .field-validation-error {
     color: #ff0000;
 }
+
+.flex {
+    display:flex;
+}
