@@ -33,6 +33,7 @@ namespace ControleDeContatos
             services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
             services.AddScoped<ISessao, Sessao>();
             services.AddScoped<IEmail, Email>();
+            services.AddScoped<RelatorioService>();
 
             services.AddSession(o => {
                 o.Cookie.HttpOnly = true;
