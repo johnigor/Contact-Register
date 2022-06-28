@@ -1,4 +1,5 @@
-﻿using ControleDeContatos.Filters;
+﻿using ControleDeContatos.Data;
+using ControleDeContatos.Filters;
 using ControleDeContatos.Models;
 using ControleDeContatos.Repositorio;
 using Microsoft.AspNetCore.Mvc;
@@ -11,9 +12,11 @@ namespace ControleDeContatos.Controllers
     public class ContatoController : Controller
     {
         private readonly IContatoRepositorio _contatoRepositorio;
-        public ContatoController(IContatoRepositorio contatoRepositorio)
+        private readonly BancoContext _bancoContext;
+        public ContatoController(IContatoRepositorio contatoRepositorio, BancoContext bancoContext)
         {
             _contatoRepositorio = contatoRepositorio;
+            _bancoContext = bancoContext;
         }
         public IActionResult Index()
         {

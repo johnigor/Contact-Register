@@ -1,5 +1,6 @@
 ﻿using ControleDeContatos.Data;
 using ControleDeContatos.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -90,5 +91,6 @@ namespace ControleDeContatos.Repositorio
 
             return true;
         }
+              
     }
 }
