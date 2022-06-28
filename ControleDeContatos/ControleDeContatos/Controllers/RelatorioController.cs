@@ -12,5 +12,21 @@ namespace ControleDeContatos.Controllers
         {
             return View();
         }
+        public IActionResult BuscarPorData()
+        {
+            return View();
+        }
+        public IActionResult BuscarPorEstado()
+        {
+            return View();
+        }
+        public IActionResult BuscarPorNome()
+        {
+            return View();
+        }
+        public IActionResult BuscarPorNomeDaEmpresa()
+        {
+            return View();
+        }
     }
 }

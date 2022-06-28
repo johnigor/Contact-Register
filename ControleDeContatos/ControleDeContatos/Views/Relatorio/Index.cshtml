@@ -29,3 +29,66 @@
         </form>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-6">
+        <form class="form-horizontal" asp-action="BuscaPorEstado">
+            <fieldset>
+                <legend>Busca por Estado</legend>
+                <div class="form-group">
+                    <label for="estado" class="col-lg-4 control-label">Digite a UF</label>
+                    <div class="col-lg-10">
+                        <input type="text" name="estado" class="form-control" />
+                    </div>
+                </div>                
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Pesquisar</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <form class="form-horizontal" asp-action="BuscaPorNome">
+            <fieldset>
+                <legend>Busca por Nome</legend>
+                <div class="form-group">
+                    <label for="nome" class="col-lg-6 control-label">Digite o nome do contato</label>
+                    <div class="col-lg-10">
+                        <input type="text" name="nome" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Pesquisar</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <form class="form-horizontal" asp-action="BuscaPorNomeDaEmpresa">
+            <fieldset>
+                <legend>Busca por nome da Empresa</legend>
+                <div class="form-group">
+                    <label for="nomeDaEmpresa" class="col-lg-6 control-label">Digite o nome da Empresa</label>
+                    <div class="col-lg-10">
+                        <input type="text" name="nomeDaEmpresa" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Pesquisar</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
