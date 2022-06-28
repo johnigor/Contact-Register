@@ -30,5 +30,16 @@ namespace ControleDeContatos.Helper
                 .OrderByDescending(x => x.DataCadastro)
                 .ToList();
         }
+
+        public List<ContatoModel> FindByName(string nome)
+        {
+            var result = from obj in _context.Contatos select obj;
+
+            result = result.Where(x => x.Nome.ToUpper() == nome.ToUpper());
+
+            return result
+                .OrderByDescending(x => x.Nome)
+                .ToList();
+        }
     }
 }

@@ -30,11 +30,13 @@ namespace ControleDeContatos.Controllers
             var result = _relatorioService.FindByDate(minDate, maxDate);
             return View(result);
         }
-        public IActionResult BuscarPorEstado()
+
+        public IActionResult BuscarPorNome(string nome)
         {
-            return View();
+            var result = _relatorioService.FindByName(nome);
+            return View(result);
         }
-        public IActionResult BuscarPorNome()
+        public IActionResult BuscarPorEstado()
         {
             return View();
         }
