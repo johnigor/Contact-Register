@@ -1200,3 +1200,4 @@ C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\C
 C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\ControleDeContatos\obj\Debug\net5.0\Razor\Views\Relatorio\BuscarPorEstado.cshtml.g.cs
 C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\ControleDeContatos\obj\Debug\net5.0\Razor\Views\Relatorio\BuscarPorNome.cshtml.g.cs
 C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\ControleDeContatos\obj\Debug\net5.0\Razor\Views\Relatorio\BuscarPorNomeDaEmpresa.cshtml.g.cs
+C:\Users\John\Desktop\CadastroDeContatos\CadastroDeContatos\ControleDeContatos\ControleDeContatos\obj\Debug\net5.0\Razor\Views\AlterarSenha\Index.cshtml.g.cs
