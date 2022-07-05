@@ -1,55 +1,79 @@
 ﻿@model IEnumerable<ControleDeContatos.Models.ContatoModel>
 
-<div class="panel panel-primary">
-    <div class="panel-body">
-        <table class="table table-striped table-hover">
-            <thead>
-                <tr class="success">
-                    <th>
-                        @Html.DisplayNameFor(model => model.Id)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Nome)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.NomeDaEmpresa)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.UF)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Email)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.DataCadastro)
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Id)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Nome)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.NomeDaEmpresa)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.UF)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Email)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.DataCadastro)
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+
+    <div class="container-fluid justify-content-md-start m-2">
+        <div>
+            <p class="display-4 text-center">Pesquisa por nome do contato</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <form class="form-horizontal" asp-action="BuscarPorNome">
+                    <fieldset>
+                        <div class="form-group row">
+                            <label for="nome" class="col-md-6 control-label">Buscar contatos</label>
+                            <div class="flex">
+                                <input placeholder="Digite o nome do contato" type="text" name="nome" class="form-control col-md-10" />
+                                <button type="submit" class="btn btn-primary ml-3">Filtrar</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
     </div>
-</div>
+
+
+
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr class="success">
+                        <th>
+                            @Html.DisplayNameFor(model => model.Id)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NomeDaEmpresa)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.UF)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DataCadastro)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Id)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nome)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NomeDaEmpresa)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UF)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DataCadastro)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>

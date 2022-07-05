@@ -13,37 +13,46 @@
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Contato" asp-action="Index">Contatos</a>
         </li>
-        @if (Model.Perfil == ControleDeContatos.Enums.PerfilEnum.Admin)
-        {
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">Usuarios</a>
-            </li>
-        }
 
         <li class="nav-item dropdown">
-            <a class="nav-link text-dark dropdown-toggle active" data-toggle="dropdown" asp-area="">Relatórios</a>
+            <a class="nav-link text-dark" data-toggle="dropdown" asp-area="">Relatórios</a>
             <ul class="dropdown-menu">
-                <h1 class="dropdown-header "><strong>Busca avançada de Contatos</strong></h1>
+                <p class="dropdown-header"><strong>Busca avançada de Contatos</strong></p>
                 <hr class="dropdown-divider" />
-                <h1 class="dropdown-header">Informações Pessoais</h1>
-                <li><a href="#" class="dropdown-item">Pesquisa por Nome</a></li>
-                <li><a href="#" class="dropdown-item">Pesquisa por Estado</a></li>
+                <p class="dropdown-header h1">Informações Pessoais</p>
+                <li><a asp-controller="Relatorio" asp-action="BuscarPorNome" class="dropdown-item">Pesquisa por Nome</a></li>
+                <li><a asp-controller="Relatorio" asp-action="BuscarPorEstado" class="dropdown-item">Pesquisa por Estado</a></li>
                 <hr class="dropdown-divider" />
-                <h1 class="dropdown-header"> Informações Empresariais</h1>
+                <p class="dropdown-header h1"> Informações Empresariais</p>
                 <li><a asp-controller="Relatorio" asp-action="BuscarPorData" class="dropdown-item">Data de Cadastro</a></li>
-                <li><a href="#" class="dropdown-item">Nome da Empresa</a></li>
+                <li><a asp-controller="Relatorio" asp-action="BuscarPorNomeDaEmpresa" class="dropdown-item">Nome da Empresa</a></li>
                 <hr class="dropdown-divider" />
-                <h1 class="dropdown-header">Todos os relatórios</h1>
+                <p class="dropdown-header h1">Todos os relatórios</p>
                 <li><a asp-controller="Relatorio" asp-action="Index" class="dropdown-item">Página de Busca</a></li>
             </ul>
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="AlterarSenha" asp-action="Index">Alterar Senha</a>
-        </li>
+        @if (Model.Perfil == ControleDeContatos.Enums.PerfilEnum.Admin)
+        {
+            <li class="nav-item dropdown">
+                <a class="nav-link text-dark" data-toggle="dropdown" asp-area="">Usuarios</a>
+                <ul class="dropdown-menu">
+                    <p class="dropdown-header"><strong>Gerenciamento de Usuários</strong></p>
+                    <hr class="dropdown-divider" />
+                    <p class="dropdown-header h2">Administrar Usuários</p>
+                    <li><a asp-controller="Usuario" asp-action="Criar" class="dropdown-item">Adicionar novo Usuário</a></li>
+                    <li><a asp-controller="Usuario" asp-action="Index" class="dropdown-item">Listagem de Usuários</a></li>
+                    <hr class="dropdown-divider" />
+                    <p class="dropdown-header h2">Segurança e Privacidade</p>
+                    <li><a asp-controller="AlterarSenha" asp-action="Index" class="dropdown-item">Alterar Senha</a></li>
+                </ul>
+            </li>
+        }
 
         <li class="nav-item">
             <a class="nav-link text-dark " asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
         </li>
     </ul>
 </div>
+
+
