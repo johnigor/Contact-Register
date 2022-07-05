@@ -20,8 +20,22 @@
             </li>
         }
 
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Relatorio" asp-action="Index">Relatórios</a>
+        <li class="nav-item dropdown">
+            <a class="nav-link text-dark dropdown-toggle active" data-toggle="dropdown" asp-area="">Relatórios</a>
+            <ul class="dropdown-menu">
+                <h1 class="dropdown-header "><strong>Busca avançada de Contatos</strong></h1>
+                <hr class="dropdown-divider" />
+                <h1 class="dropdown-header">Informações Pessoais</h1>
+                <li><a href="#" class="dropdown-item">Pesquisa por Nome</a></li>
+                <li><a href="#" class="dropdown-item">Pesquisa por Estado</a></li>
+                <hr class="dropdown-divider" />
+                <h1 class="dropdown-header"> Informações Empresariais</h1>
+                <li><a asp-controller="Relatorio" asp-action="BuscarPorData" class="dropdown-item">Data de Cadastro</a></li>
+                <li><a href="#" class="dropdown-item">Nome da Empresa</a></li>
+                <hr class="dropdown-divider" />
+                <h1 class="dropdown-header">Todos os relatórios</h1>
+                <li><a asp-controller="Relatorio" asp-action="Index" class="dropdown-item">Página de Busca</a></li>
+            </ul>
         </li>
 
         <li class="nav-item">
@@ -29,7 +43,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
+            <a class="nav-link text-dark " asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
         </li>
     </ul>
 </div>

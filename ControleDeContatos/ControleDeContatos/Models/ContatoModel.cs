@@ -14,6 +14,7 @@ namespace ControleDeContatos.Models
         public string Cargo { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório!")]
+        [Display(Name = "Nome da Empresa")]
         public string NomeDaEmpresa { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório!")]
@@ -23,6 +24,7 @@ namespace ControleDeContatos.Models
 
         [Required(ErrorMessage = "Este campo é obrigatório!")]
         [EmailAddress(ErrorMessage = "O e-mail informado não é válido!")]
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório!")]
@@ -32,6 +34,7 @@ namespace ControleDeContatos.Models
         public string Logradouro { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório!")]
+        [Display(Name = "Número")]
         public int Numero { get; set; }
                 
         public string Complemento { get; set; }
@@ -45,6 +48,7 @@ namespace ControleDeContatos.Models
         [Required(ErrorMessage = "Este campo é obrigatório!")]
         public string UF { get; set; }
 
+        [Display(Name = "Data de Cadastro")]
         public DateTime DataCadastro { get; set; }
     }
 }
