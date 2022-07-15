@@ -12,11 +12,9 @@ namespace ControleDeContatos.Controllers
     public class ContatoController : Controller
     {
         private readonly IContatoRepositorio _contatoRepositorio;
-        private readonly BancoContext _bancoContext;
-        public ContatoController(IContatoRepositorio contatoRepositorio, BancoContext bancoContext)
+        public ContatoController(IContatoRepositorio contatoRepositorio)
         {
             _contatoRepositorio = contatoRepositorio;
-            _bancoContext = bancoContext;
         }
         public IActionResult Index()
         {
@@ -58,14 +56,14 @@ namespace ControleDeContatos.Controllers
                 }
                 else
                 {
-                    TempData["MensagemErro"] = "Ops, não conseguimos apagar seu contato!";
+                    TempData["MensagemErro"] = "Falha ao deletar contato!";
                 }
                 
                 return RedirectToAction("Index");
             }
             catch (Exception erro)
             {
-                TempData["MensagemSucesso"] = $"Ops, não conseguimos apagar seu contato, mais detalhes do erro: {erro.Message}";
+                TempData["MensagemSucesso"] = $"Não conseguimos apagar seu contato, mais detalhes do erro: {erro.Message}";
                 return RedirectToAction("Index");
             }
         }
@@ -86,7 +84,7 @@ namespace ControleDeContatos.Controllers
             }
             catch (Exception erro)
             {
-                TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar seu contato, tente novamente! Detalhe do erro: {erro.Message}";
+                TempData["MensagemErro"] = $"Não conseguimos cadastrar seu contato, tente novamente! Detalhe do erro: {erro.Message}";
                 return RedirectToAction("Index");
             }
         }
@@ -108,7 +106,7 @@ namespace ControleDeContatos.Controllers
             }
             catch (Exception error)
             {
-                TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar seu contato, tente novamente! Detalhe do erro: {error.Message}";
+                TempData["MensagemErro"] = $"Não conseguimos cadastrar seu contato, tente novamente! Detalhe do erro: {error.Message}";
                 return RedirectToAction("Index");
             }            
         }

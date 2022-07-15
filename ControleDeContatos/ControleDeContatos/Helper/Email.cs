@@ -34,7 +34,7 @@ namespace ControleDeContatos.Helper
 
                 mail.To.Add(email);
                 mail.Subject = assunto;
-                mail.Body = mensagem + "Entre no link a seguir para acessar sua conta e redefinir sua senha: http://localhost:6828/Login/RedefinirSenha";
+                mail.Body = mensagem + "Acesse o link a seguir para alterar sua senha. Use a senha gerada no campo \"Senha Atual\": http://localhost:6828/AlterarSenha";
                 mail.IsBodyHtml = true;
                 mail.Priority = MailPriority.High;
 
