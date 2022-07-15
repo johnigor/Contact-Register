@@ -27,7 +27,7 @@ namespace ControleDeContatos.Helper
                 string senha = _configuration.GetValue<string>("SMTP:Senha");
                 int porta = _configuration.GetValue<int>("SMTP:Porta");
 
-                MailMessage mail = new MailMessage()
+                MailMessage mail = new()
                 {
                     From = new MailAddress(userName, nome)
                 };
@@ -38,16 +38,14 @@ namespace ControleDeContatos.Helper
                 mail.IsBodyHtml = true;
                 mail.Priority = MailPriority.High;
 
-                using (SmtpClient smtp = new SmtpClient(host, porta))
-                {
-                    smtp.Credentials = new NetworkCredential(userName, senha);
-                    smtp.EnableSsl = true;
+                using SmtpClient smtp = new(host, porta);
+                smtp.Credentials = new NetworkCredential(userName, senha);
+                smtp.EnableSsl = true;
 
-                    smtp.Send(mail);
-                    return true;
-                }
+                smtp.Send(mail);
+                return true;
             }
-            catch (Exception erro)
+            catch (Exception)
             {
                 // gravar log de erro ao enviar e-mail
 

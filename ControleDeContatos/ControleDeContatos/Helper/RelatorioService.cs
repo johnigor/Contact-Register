@@ -36,19 +36,18 @@ namespace ControleDeContatos.Helper
 
         public List<ContatoModel> FindByState(string uf)
         {
-            var result = _context.Contatos.Where(x => x.UF.ToUpper() == uf.ToUpper()).ToList();
-            return result;
+            var result = _context.Contatos.Where(x => x.UF.Contains(uf));
+            return result.ToList();
         }
 
         public List<ContatoModel> FindByEnterpriseName(string nomeDaEmpresa)
         {
             try
             {
-                var result = _context.Contatos.Where(x => x.NomeDaEmpresa.ToUpper().Contains(nomeDaEmpresa.ToUpper()));
+                if (string.IsNullOrEmpty(nomeDaEmpresa)) nomeDaEmpresa = string.Empty;
+                var result = _context.Contatos.Where(x => x.NomeDaEmpresa.ToUpper().Contains(nomeDaEmpresa.ToUpper())).OrderByDescending(x => x.NomeDaEmpresa);
 
-                return result
-                    .OrderByDescending(x => x.NomeDaEmpresa)
-                    .ToList();
+                return result.ToList();
             }
             catch (Exception erro)
             {

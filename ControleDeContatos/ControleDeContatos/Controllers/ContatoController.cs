@@ -94,6 +94,7 @@ namespace ControleDeContatos.Controllers
         [HttpPost]
         public IActionResult Editar(ContatoModel contato)
         {
+            contato.DataCadastro = DateTime.Now;
             try
             {
                 if (ModelState.IsValid)
@@ -109,7 +110,7 @@ namespace ControleDeContatos.Controllers
             {
                 TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar seu contato, tente novamente! Detalhe do erro: {error.Message}";
                 return RedirectToAction("Index");
-            }
+            }            
         }
     }
 }
