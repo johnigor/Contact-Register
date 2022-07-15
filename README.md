@@ -1,0 +1,41 @@
+# CadastroDeContatos
+This project is a task I received working at Esi Brasil as a Trainee. 
+This application is useful to control the Contacts and User records, made using C# and EF Core, DataBase was used SQL Server. Now, let's see about the project:
+<br />
+<br />
+1. To access the site, the user must be logged in to a session, 
+if user forgot password, this can be recovered by option Redefinir "Senha/Reset Password". The new password is immediately sent to the user's e-mail.
+- The admin user has all access over the app's features, the standard user has all access except for the Users page control
+
+![image](https://user-images.githubusercontent.com/91505101/179227395-8ca16a2a-5d83-49cb-86a4-e9cfbb1c884f.png)
+<br />
+<br />
+<br />
+2. On the contacts page, all records can be organized by six types of orders (Id, Name, Cellphone, Enterprise Name, State and Register Date) as DataTable makes this feature available.
+- On the same page you can choose the option to register a new contact, or edit/delete an existing contact.
+- If you are adding a new contact, there are mandatory fields to fill in.
+<br />
+![image](https://user-images.githubusercontent.com/91505101/179283950-e8830a77-efcb-4b37-9d89-30ae8248372d.png)
+<br />
+<br />
+<br />
+![image](https://user-images.githubusercontent.com/91505101/179245246-04837eda-eb0b-4375-910f-1b21d7929d9c.png)
+<br />
+<br />
+<br />
+![image](https://user-images.githubusercontent.com/91505101/179245354-1d0829b9-467f-4287-8afb-248d8bf513d1.png)
+<br />
+<br />
+<br />
+![image](https://user-images.githubusercontent.com/91505101/179227912-16a9b02a-2214-443a-84e4-989f980f0028.png)
+<br />
+<br />
+<br />
+![image](https://user-images.githubusercontent.com/91505101/179245634-cb6930e5-659c-4d99-ba5d-1237e95bf021.png)
+<br />
+<br />
+<br />
+![image](https://user-images.githubusercontent.com/91505101/179245794-36783d9f-ed0e-45e1-a4f0-32067dac6494.png)
+<br />
+<br />
+<br />
