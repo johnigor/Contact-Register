@@ -5,7 +5,6 @@ This application is useful to control the Contacts and User records, made using 
 <br />
 1. To access the site, the user must be logged in to a session, 
 if user forgot password, this can be recovered by option "Redefinir Senha/Reset Password". The new password is immediately sent to the user's e-mail.
-- The admin user has all access over the app's features, the standard user has all access except for the Users page control.
 
 ![image](https://user-images.githubusercontent.com/91505101/179227395-8ca16a2a-5d83-49cb-86a4-e9cfbb1c884f.png)
 <br />
@@ -70,3 +69,7 @@ if user forgot password, this can be recovered by option "Redefinir Senha/Reset 
 <br />
 <br />
 <br />
+
+6. In the Database, the user's password is encrypted for the privacy of all users. <br />
+
+![image](https://user-images.githubusercontent.com/91505101/179301591-e393b925-ba6f-487f-884d-d1fa3e9623fd.png)
