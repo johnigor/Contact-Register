@@ -1,6 +1,6 @@
-# CadastroDeContatos
+# Contact Register
 This project is a task I received working at Esi Brasil as a Trainee. 
-This application is useful to control the Contacts and User records, made using C# and EF Core, DataBase was used SQL Server. Now, let's see about the project:
+This application is used to control the Contacts and User records, made using C# and EF Core, DataBase was used SQL Server. Now, let's see about the project:
 <br />
 <br />
 1. To access the site, the user must be logged in to a session, 
